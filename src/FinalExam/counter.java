@@ -9,7 +9,12 @@ public class counter {
 
     }
     public void wordcounter (String counting) {
-        charcount += counting.length();
+        for (int i = 0; i < counting.length(); i++) {
+            char currentChar = counting.charAt(i);
+            if (!Character.isWhitespace(currentChar)) {
+                charcount++;
+            }
+        }
         linecount++;
     }
 
