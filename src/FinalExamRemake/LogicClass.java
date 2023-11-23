@@ -5,12 +5,13 @@ public class LogicClass {
     public static class Counter {
         public int linecount = 0;
         public int charcount = 0;
+        public int wordcount = 0;
         Reader textReader = new Reader();
 
         public Counter() {
         }
 
-        public void wordCounter(String counting) {
+        public void charCounter(String counting) {
 
             for (int i = 0; i < counting.length(); i++) {
                 char currentChar = counting.charAt(i);
@@ -20,10 +21,15 @@ public class LogicClass {
             }
             linecount++;
         }
+        public void wordCounter(String counting) {
+            String[] words = counting.split("\\s+");
+            wordcount += words.length;
+        }
 
         public void getCounter() {
             textReader.getTotalLines(linecount);
             textReader.getTotalChar(charcount);
+            textReader.getTotalWords(wordcount);
         }
     }
 
@@ -45,6 +51,7 @@ public class LogicClass {
     public static class Reader {
         private static int totalLines = 0;
         private static int totalChar = 0;
+        private static int totalWords = 0;
         private static String[] words = new String[100];
 
         public Reader() {
@@ -63,6 +70,10 @@ public class LogicClass {
         public void getTotalChar(int getTotalChar) {
             totalChar = getTotalChar;
             System.out.println("Total characters: " + totalChar);
+        }
+        public void getTotalWords(int getTotalWords) {
+            totalWords = getTotalWords;
+            System.out.println("Total words: " + totalWords);
         }
 
         public void endResult() {
