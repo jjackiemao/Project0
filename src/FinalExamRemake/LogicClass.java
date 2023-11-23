@@ -11,6 +11,7 @@ public class LogicClass {
         }
 
         public void wordCounter(String counting) {
+
             for (int i = 0; i < counting.length(); i++) {
                 char currentChar = counting.charAt(i);
                 if (!Character.isWhitespace(currentChar)) {

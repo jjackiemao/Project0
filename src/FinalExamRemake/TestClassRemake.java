@@ -49,6 +49,7 @@ public class TestClassRemake {
 
         System.out.println("End");
         System.out.println("                   ");
+
     }
 
 
@@ -68,5 +69,6 @@ public class TestClassRemake {
 
         System.out.println("End");
         System.out.println("                    ");
+
     }
 }

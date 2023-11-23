@@ -37,6 +37,7 @@ import java.util.Scanner;
                 }
 
             }
+
             counter.getCounter();
             reader.endResult();
             System.out.println("Longest word: " + longestWord);
