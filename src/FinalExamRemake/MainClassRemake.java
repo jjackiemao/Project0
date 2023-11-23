@@ -26,6 +26,7 @@ import java.util.Scanner;
                 if (line.equalsIgnoreCase("stop")) {
                     break;
                 }
+                counter.charCounter(line);
                 counter.wordCounter(line);
                 reader.setWordArray(line, i);
 
