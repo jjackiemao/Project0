@@ -1,4 +1,4 @@
-package Inlämningsuppgift;
+package ExcercisedBeforeFinalExam;
 
 public class MainRepetition {
     public static void main(String[] args) {

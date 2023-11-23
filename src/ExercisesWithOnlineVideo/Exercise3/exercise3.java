@@ -10,7 +10,7 @@ public class exercise3 {
 
         System.out.println("Övn1");
         int number = 1;
-        while (number <= 100) {
+        while (number <= 10000) {
             System.out.println("number" + number);
             number = number + 1;
         }
