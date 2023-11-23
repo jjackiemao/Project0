@@ -13,8 +13,8 @@ public class TestClassRemake {
 
         System.out.println("Start of Counter Test");
 
-        testCounter.wordCounter("Testing word counter");
-        testCounter.wordCounter("Testing line counter");
+        testCounter.charCounter("Testing word counter");
+        testCounter.charCounter("Testing line counter");
 
         int expectedChar = 36;
         int expectedLine = 2;
@@ -70,5 +70,21 @@ public class TestClassRemake {
         System.out.println("End");
         System.out.println("                    ");
 
+    }
+
+    @Test
+    public void testCountWords() {
+        LogicClass.Counter wordCounter = new LogicClass.Counter();
+
+        String sentence = "There should be about 12 words in this sentence, is that correct?";
+
+        int expectedWordCount = 12;
+        wordCounter.wordCounter(sentence);
+        int actualWordCount = wordCounter.wordcount;
+
+        System.out.println("Actual Word Count: " + actualWordCount);
+        System.out.println("Expected Word Count: " + expectedWordCount);
+
+        assertEquals("Word count is incorrect", expectedWordCount, actualWordCount);
     }
 }
